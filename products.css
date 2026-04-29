@@ -60,6 +60,18 @@
     font-size: 2.2rem;
     color: var(--color-white);
     text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-badge-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.6);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
 }
 
 /* --- Main Content --- */
@@ -150,6 +162,26 @@
     letter-spacing: 0.06em;
     margin-bottom: 16px;
     padding: 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-deco-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.photo-disclaimer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    padding: 16px 20px 8px;
+    margin: 0;
+    letter-spacing: 0.02em;
 }
 
 /* --- Product Card --- */
@@ -311,4 +343,16 @@
     .price[data-size]::before {
         content: attr(data-size) " ";
     }
+}
+
+/* Photo disclaimer */
+.footer-disclaimer,
+.footer-legal,
+.photo-disclaimer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--color-gray-400);
+    padding: 16px 20px 0;
+    margin: 0;
+    font-style: italic;
 }

@@ -155,6 +155,62 @@
         </div>
     </section>
 
+    <!-- ===== GALERIE PHOTOS ===== -->
+    <section class="section section-gallery" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Ambiance</span>
+                <h2 class="section-title">Notre établissement en images</h2>
+                <p class="section-desc">Découvrez l'esprit du Pacific à travers nos photos</p>
+            </div>
+
+            <div class="gallery-grid">
+                <a href="images/photos/four-a-pizza.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre four à bois">
+                    <img src="images/photos/four-a-pizza.jpg" alt="Four à pizza traditionnel">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Four à bois</span>
+                    </div>
+                </a>
+                <a href="images/photos/pizza-margherita.jpg" class="gallery-item" data-lightbox="gallery" data-title="Pizza Margherita">
+                    <img src="images/photos/pizza-margherita.jpg" alt="Pizza Margherita maison">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Pizza artisanale</span>
+                    </div>
+                </a>
+                <a href="images/photos/bieres-artisanales.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre sélection de bières">
+                    <img src="images/photos/bieres-artisanales.jpg" alt="Bières artisanales">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Bières</span>
+                    </div>
+                </a>
+                <a href="images/photos/vins-rouges.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre cave à vins">
+                    <img src="images/photos/vins-rouges.jpg" alt="Vins rouges">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Vins</span>
+                    </div>
+                </a>
+                <a href="images/photos/cocktails.jpg" class="gallery-item" data-lightbox="gallery" data-title="Nos cocktails">
+                    <img src="images/photos/cocktails.jpg" alt="Cocktails">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Cocktails</span>
+                    </div>
+                </a>
+                <a href="images/photos/glaces.jpg" class="gallery-item" data-lightbox="gallery" data-title="Nos glaces artisanales">
+                    <img src="images/photos/glaces.jpg" alt="Glaces">
+                    <div class="gallery-overlay">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                        <span>Glaces</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== INFORMATIONS ===== -->
     <section class="section section-infos" id="infos">
         <div class="container">
@@ -337,6 +393,40 @@
                     '<p class="plats-empty">Le chef n\'a pas encore prévu les plats du jour</p>';
             });
         }
+    </script>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <script>
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = '<button class="lightbox-close" id="lightboxClose"><span class="material-symbols-outlined">close</span></button><img src="" alt="">';
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('img');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = item.getAttribute('href');
+                lightboxImg.src = href;
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     </script>
 </body>
 </html>
