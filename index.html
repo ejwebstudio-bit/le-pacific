@@ -88,7 +88,7 @@
             <div class="categories-grid">
                 <a href="menu_pizzas.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/pizzas.jpg" alt="Nos Pizzas">
+                        <img src="images/photos/four-a-pizza.jpg" alt="Nos Pizzas">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">local_pizza</span>
@@ -99,7 +99,7 @@
 
                 <a href="menu_bieres_softs.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/bieres_softs.jpg" alt="Bières et Softs">
+                        <img src="images/photos/bieres-artisanales.jpg" alt="Bières et Softs">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">liquor</span>
@@ -110,7 +110,7 @@
 
                 <a href="menu_vins.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/vins.jpg" alt="Nos Vins">
+                        <img src="images/photos/vins-rouges.jpg" alt="Nos Vins">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">wine_bar</span>
@@ -121,7 +121,7 @@
 
                 <a href="menu_aperitifs_cocktails.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/aperitifs_cocktails.jpg" alt="Apéros et Cocktails">
+                        <img src="images/photos/cocktails.jpg" alt="Apéros et Cocktails">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">cocktail</span>
@@ -132,7 +132,7 @@
 
                 <a href="menu_desserts.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/desserts.jpg" alt="Desserts Maison et Glaces">
+                        <img src="images/photos/glaces.jpg" alt="Desserts Maison et Glaces">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">cake</span>
@@ -143,68 +143,12 @@
 
                 <a href="menu_digestifs.html" class="categorie-card">
                     <div class="categorie-img">
-                        <img src="images/categories/digestifs.jpg" alt="Digestifs">
+                        <img src="images/photos/aperitifs-whisky.jpg" alt="Digestifs">
                     </div>
                     <div class="categorie-info">
                         <span class="categorie-icon material-symbols-outlined">coffee</span>
                         <h3>Digestifs</h3>
                         <p>Pour finir en beauté</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== GALERIE PHOTOS ===== -->
-    <section class="section section-gallery" id="galerie">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Ambiance</span>
-                <h2 class="section-title">Notre établissement en images</h2>
-                <p class="section-desc">Découvrez l'esprit du Pacific à travers nos photos</p>
-            </div>
-
-            <div class="gallery-grid">
-                <a href="images/photos/four-a-pizza.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre four à bois">
-                    <img src="images/photos/four-a-pizza.jpg" alt="Four à pizza traditionnel">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Four à bois</span>
-                    </div>
-                </a>
-                <a href="images/photos/pizza-margherita.jpg" class="gallery-item" data-lightbox="gallery" data-title="Pizza Margherita">
-                    <img src="images/photos/pizza-margherita.jpg" alt="Pizza Margherita maison">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Pizza artisanale</span>
-                    </div>
-                </a>
-                <a href="images/photos/bieres-artisanales.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre sélection de bières">
-                    <img src="images/photos/bieres-artisanales.jpg" alt="Bières artisanales">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Bières</span>
-                    </div>
-                </a>
-                <a href="images/photos/vins-rouges.jpg" class="gallery-item" data-lightbox="gallery" data-title="Notre cave à vins">
-                    <img src="images/photos/vins-rouges.jpg" alt="Vins rouges">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Vins</span>
-                    </div>
-                </a>
-                <a href="images/photos/cocktails.jpg" class="gallery-item" data-lightbox="gallery" data-title="Nos cocktails">
-                    <img src="images/photos/cocktails.jpg" alt="Cocktails">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Cocktails</span>
-                    </div>
-                </a>
-                <a href="images/photos/glaces.jpg" class="gallery-item" data-lightbox="gallery" data-title="Nos glaces artisanales">
-                    <img src="images/photos/glaces.jpg" alt="Glaces">
-                    <div class="gallery-overlay">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                        <span>Glaces</span>
                     </div>
                 </a>
             </div>
@@ -343,90 +287,64 @@
         });
 
         // === Plats du jour AJAX ===
-        const toTimeStamp = (date) => Date.parse(date) / 1000;
-        const dateToday = new Date();
-        const date = dateToday.getFullYear() + '-' +
-            String(dateToday.getMonth() + 1).padStart(2, '0') + '-' +
-            String(dateToday.getDate()).padStart(2, '0');
+        const toTimeStamp = (date) => { 
+            const dt = Date.parse(date); 
+            return dt / 1000; 
+        } 
 
-        fetch('plats/get_holiday.php', { method: 'POST' })
-            .then(r => r.text())
-            .then(response => {
-                if (response) {
-                    const holiday = response.split(';');
-                    if (holiday[0] && holiday[1]) {
+        var dateToday = new Date()
+        var date = dateToday.getFullYear()+"-"+('0'+(dateToday.getMonth()+1)).slice(-2)+"-"+('0'+dateToday.getDate()).slice(-2);
+
+        $.ajax({
+            url: 'plats/get_holiday.php',
+            type: 'POST',
+            cache: false,
+            success: function (response) {
+                if (response != "") {
+                    holiday = response.split(";");
+                    if(holiday[0] != "" && holiday[1] != "") {
                         if (toTimeStamp(date) >= toTimeStamp(holiday[0]) && toTimeStamp(date) <= toTimeStamp(holiday[1])) {
-                            const start = holiday[0].split('-').reverse().join('/');
-                            const end = holiday[1].split('-').reverse().join('/');
-                            document.getElementById('platsList').innerHTML =
-                                '<p class="plats-closed">Le restaurant est fermé</p>' +
-                                '<p class="plats-dates">Du ' + start + ' au ' + end + '</p>';
-                            return;
+                            document.getElementById("platsList").innerHTML = '<br><br><br><br><br><br><p>Le restaurant est fermé</p>';
+                            start_split = holiday[0].split("-");
+                            start = start_split[2] + "/" + start_split[1] + "/" + start_split[0];
+                            document.getElementById("platsList").innerHTML += '<p>Du ' + start + '</p>';
+                            end_split = holiday[1].split("-");
+                            end = end_split[2] + "/" + start_split[1] + "/" + start_split[0];
+                            document.getElementById("platsList").innerHTML += '<p>Au ' + end + '</p>';
+                        }
+                        else {
+                            showPlats(date);
                         }
                     }
+                    else {
+                        showPlats(date);
+                    }
                 }
-                showPlats(date);
-            })
-            .catch(() => showPlats(date));
+                else {
+                    
+                }
+            }
+        });
 
         function showPlats(date) {
-            fetch('plats/get_plats.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: 'date=' + date
-            })
-            .then(r => r.text())
-            .then(response => {
-                const list = document.getElementById('platsList');
-                if (response) {
-                    const plats = response.split(';').filter(p => p);
-                    list.innerHTML = '';
-                    plats.forEach(p => {
-                        list.innerHTML += '<p class="plat-item"><span class="plat-bullet">&bull;</span> ' + p + '</p>';
-                    });
-                } else {
-                    list.innerHTML = '<p class="plats-empty">Le chef n\'a pas encore prévu les plats du jour</p>';
+            $.ajax({
+                url: 'plats/get_plats.php',
+                type: 'POST',
+                data: { date: date},
+                cache: false,
+                success: function (response) {
+                    if (response != "") {
+                        plats = response.split(";");
+                        document.getElementById("platsList").innerHTML = '<p class="platsdujour_title">Plats du jour</p>';
+                        for (var i = 0; i < plats.length; i++) { if ( plats[i] != "")document.getElementById("platsList").innerHTML += '<p>- ' + plats[i] + '</p>'; }
+                    }
+                    else {
+                        document.getElementById("platsList").innerHTML = '<p class="platsdujour_title">Plats du jour</p>';
+                        document.getElementById("platsList").innerHTML += "<p>&nbsp;</p><p>&nbsp;</p><p>Le chef n'a pas encore prévu les plats</p>";
+                    }
                 }
-            })
-            .catch(() => {
-                document.getElementById('platsList').innerHTML =
-                    '<p class="plats-empty">Le chef n\'a pas encore prévu les plats du jour</p>';
             });
         }
-    </script>
-
-    <!-- ===== LIGHTBOX ===== -->
-    <script>
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = '<button class="lightbox-close" id="lightboxClose"><span class="material-symbols-outlined">close</span></button><img src="" alt="">';
-        document.body.appendChild(lightbox);
-
-        const lightboxImg = lightbox.querySelector('img');
-        const lightboxClose = document.getElementById('lightboxClose');
-
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                const href = item.getAttribute('href');
-                lightboxImg.src = href;
-                lightbox.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        function closeLightbox() {
-            lightbox.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
     </script>
 </body>
 </html>
