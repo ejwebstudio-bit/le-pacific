@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Pacific — Restaurant Pizzeria | Puiseux-en-France</title>
+    <meta name="description" content="Le Pacific — Restaurant Pizzeria à Puiseux-en-France. Produits frais, pizzas artisanales, plats du jour, desserts maison. Découvrez notre carte en ligne.">
+    <meta property="og:title" content="Le Pacific — Restaurant Pizzeria">
+    <meta property="og:description" content="Restaurant Pizzeria à Puiseux-en-France — Produits Frais">
+    <meta property="og:image" content="https://le-pacific.fr/images/header.jpg">
+    <meta property="og:url" content="https://le-pacific.fr">
+    <meta name="robots" content="index,follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,1" />
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZXHEKNM4H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9ZXHEKNM4H');
+    </script>
+</head>
+<body>
+    <!-- ===== HEADER / HERO ===== -->
+    <header class="hero" id="top">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg" style="background-image: url('images/header.jpg');"></div>
+        <nav class="navbar">
+            <div class="nav-brand">Le Pacific</div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#menu" class="nav-link">La Carte</a></li>
+                <li><a href="#infos" class="nav-link">Infos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-title">Le Pacific</h1>
+            <p class="hero-subtitle">Restaurant &bull; Pizzeria &bull; Produits Frais</p>
+            <p class="hero-location">Puiseux-en-France</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Découvrir la carte</a>
+                <a href="tel:+33134723979" class="btn btn-secondary">
+                    <span class="material-symbols-outlined">call</span> 01 34 72 39 79
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
+    </header>
+
+    <!-- ===== PLATS DU JOUR ===== -->
+    <section class="section section-plats" id="accueil">
+        <div class="container">
+            <div class="plats-card">
+                <div class="plats-image">
+                    <img src="images/platsdujour.jpg" alt="Plats du jour" id="platsImg">
+                </div>
+                <div class="plats-content">
+                    <h2 class="section-title left">Plats du jour</h2>
+                    <div class="plats-list" id="platsList">
+                        <p class="plats-loading">Chargement...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU / CATÉGORIES ===== -->
+    <section class="section section-menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Notre carte</span>
+                <h2 class="section-title">Le Menu</h2>
+                <p class="section-desc">Des produits frais, une cuisine généreuse — découvrez toutes nos propositions</p>
+            </div>
+
+            <div class="categories-grid">
+                <a href="menu_pizzas.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/pizzas.jpg" alt="Nos Pizzas">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">local_pizza</span>
+                        <h3>Nos Pizzas</h3>
+                        <p>Artisanales & généreuses</p>
+                    </div>
+                </a>
+
+                <a href="menu_bieres_softs.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/bieres_softs.jpg" alt="Bières et Softs">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">liquor</span>
+                        <h3>Bières & Softs</h3>
+                        <p>Boissons fraîches</p>
+                    </div>
+                </a>
+
+                <a href="menu_vins.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/vins.jpg" alt="Nos Vins">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">wine_bar</span>
+                        <h3>Nos Vins</h3>
+                        <p>Sélection de crus</p>
+                    </div>
+                </a>
+
+                <a href="menu_aperitifs_cocktails.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/aperitifs_cocktails.jpg" alt="Apéros et Cocktails">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">cocktail</span>
+                        <h3>Apéro & Cocktails</h3>
+                        <p>Moment de partage</p>
+                    </div>
+                </a>
+
+                <a href="menu_desserts.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/desserts.jpg" alt="Desserts Maison et Glaces">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">cake</span>
+                        <h3>Desserts & Glaces</h3>
+                        <p>Fait maison</p>
+                    </div>
+                </a>
+
+                <a href="menu_digestifs.html" class="categorie-card">
+                    <div class="categorie-img">
+                        <img src="images/categories/digestifs.jpg" alt="Digestifs">
+                    </div>
+                    <div class="categorie-info">
+                        <span class="categorie-icon material-symbols-outlined">coffee</span>
+                        <h3>Digestifs</h3>
+                        <p>Pour finir en beauté</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INFORMATIONS ===== -->
+    <section class="section section-infos" id="infos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Infos pratiques</span>
+                <h2 class="section-title">Nous trouver</h2>
+            </div>
+
+            <div class="infos-grid">
+                <div class="info-card">
+                    <span class="info-icon material-symbols-outlined">location_on</span>
+                    <h3>Adresse</h3>
+                    <p>6 route de Marly<br>95380 Puiseux-en-France</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon material-symbols-outlined">phone</span>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:+33134723979">01 34 72 39 79</a></p>
+                    <p><a href="tel:+33664131049">06 64 13 10 49</a></p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon material-symbols-outlined">schedule</span>
+                    <h3>Horaires</h3>
+                    <p>Nous contacter pour les horaires</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="info-icon material-symbols-outlined">star</span>
+                    <h3>Donnez votre avis</h3>
+                    <a href="http://search.google.com/local/writereview?placeid=ChIJP2ifggw_5kcRH9cRYT8Yw9I" target="_blank" class="btn btn-small">Avis Google</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / RÉSEAUX ===== -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <div class="contact-cta">
+                <h2>Réservez votre table</h2>
+                <p>Appelez-nous pour réserver ou commander à emporter</p>
+                <a href="tel:+33134723979" class="btn btn-primary btn-large">
+                    <span class="material-symbols-outlined">call</span> 01 34 72 39 79
+                </a>
+            </div>
+
+            <div class="social-links">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/PacificPizzeria/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                        <img src="images/facebook.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/le_pacific_/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                        <img src="images/instagram.jpg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">Le Pacific</div>
+            <p class="footer-text">Restaurant Pizzeria — 6 route de Marly, 95380 Puiseux-en-France</p>
+            <p class="footer-copy">&copy; 2025 Le Pacific. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <script>
+        // === Navigation mobile toggle ===
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const icon = navToggle.querySelector('.material-symbols-outlined');
+            icon.textContent = navLinks.classList.contains('open') ? 'close' : 'menu';
+        });
+
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+            });
+        });
+
+        // === Navbar scroll effect ===
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // === Back to top button ===
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // === Active nav link on scroll ===
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 150;
+                if (window.scrollY >= top) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+
+        // === Plats du jour AJAX ===
+        const toTimeStamp = (date) => Date.parse(date) / 1000;
+        const dateToday = new Date();
+        const date = dateToday.getFullYear() + '-' +
+            String(dateToday.getMonth() + 1).padStart(2, '0') + '-' +
+            String(dateToday.getDate()).padStart(2, '0');
+
+        fetch('plats/get_holiday.php', { method: 'POST' })
+            .then(r => r.text())
+            .then(response => {
+                if (response) {
+                    const holiday = response.split(';');
+                    if (holiday[0] && holiday[1]) {
+                        if (toTimeStamp(date) >= toTimeStamp(holiday[0]) && toTimeStamp(date) <= toTimeStamp(holiday[1])) {
+                            const start = holiday[0].split('-').reverse().join('/');
+                            const end = holiday[1].split('-').reverse().join('/');
+                            document.getElementById('platsList').innerHTML =
+                                '<p class="plats-closed">Le restaurant est fermé</p>' +
+                                '<p class="plats-dates">Du ' + start + ' au ' + end + '</p>';
+                            return;
+                        }
+                    }
+                }
+                showPlats(date);
+            })
+            .catch(() => showPlats(date));
+
+        function showPlats(date) {
+            fetch('plats/get_plats.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'date=' + date
+            })
+            .then(r => r.text())
+            .then(response => {
+                const list = document.getElementById('platsList');
+                if (response) {
+                    const plats = response.split(';').filter(p => p);
+                    list.innerHTML = '';
+                    plats.forEach(p => {
+                        list.innerHTML += '<p class="plat-item"><span class="plat-bullet">&bull;</span> ' + p + '</p>';
+                    });
+                } else {
+                    list.innerHTML = '<p class="plats-empty">Le chef n\'a pas encore prévu les plats du jour</p>';
+                }
+            })
+            .catch(() => {
+                document.getElementById('platsList').innerHTML =
+                    '<p class="plats-empty">Le chef n\'a pas encore prévu les plats du jour</p>';
+            });
+        }
+    </script>
+</body>
+</html>

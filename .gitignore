@@ -1,0 +1,12 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+
+# Fichiers de configuration locaux
+.env
+*.local
+
+# PHP cache
+plats/cache/
